@@ -3,8 +3,8 @@ import db from './db.mjs';
 import cron from 'node-cron';
 
 // Replace with your token
-// const token = '7603611635:AAGrHGVaCkdrhjV3PDCbJVwXhDhnB6z8fg4';
-const token = process.env.BOT_TOKEN;
+// const token = process.env.TELEGRAM_BOT_TOKEN;
+const token = process.env.TOKEN
 const bot = new TelegramBot(token, { polling: true });
 
 // /start command

@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 dotenv.config();
+import express from 'express';
 import TelegramBot from 'node-telegram-bot-api';
 import db from './db.mjs';
 import cron from 'node-cron';
@@ -26,6 +27,7 @@ bot.onText(/\/start(?:\s+(\d+))?/, async (msg, match) => {
       streak: 0,
       referredBy: referrerId || null,
       referrals: 0,
+      username: name,
     };
 
     // If referrer exists and is not the same as the new user
@@ -190,7 +192,6 @@ bot.on("polling_error", (error) => {
     }, 10000);
   }
 });
-import express from 'express';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -202,3 +203,4 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`✅ Express server listening on port ${PORT}`);
 });
+

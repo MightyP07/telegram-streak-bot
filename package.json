@@ -2,14 +2,15 @@
   "name": "telegram-streak-bot",
   "version": "1.0.0",
   "type": "module",
-  "main": "index.js",
+  "main": "index.mjs",
   "scripts": {
+    "start": "node index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jeremiah Bam",
   "license": "ISC",
-  "description": "",
+  "description": "Telegram streak bot to track daily logins",
   "dependencies": {
     "lowdb": "^7.0.1",
     "node-cron": "^4.2.1",

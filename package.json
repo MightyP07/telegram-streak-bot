@@ -13,6 +13,7 @@
   "description": "Telegram streak bot to track daily logins",
   "dependencies": {
     "dotenv": "^17.2.0",
+    "express": "^5.1.0",
     "lowdb": "^7.0.1",
     "node-cron": "^4.2.1",
     "node-telegram-bot-api": "^0.66.0"
